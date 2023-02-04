@@ -1,0 +1,83 @@
+.shipmentCard-body {
+  height: 300px;
+  width: 300px;
+  margin: 30px;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.40);
+  transition: all 0.15s ease-in;
+  border-bottom-right-radius: 60px 5px;
+}
+
+
+.shipmentCard-body:hover {
+    transform: scale(1.04) !important;
+}
+
+.shipmentCard-body h3 {
+  padding: 0px;
+  margin: 20px 0px 0px 20px;
+  font-size: 30px;
+}
+
+.shipmentCard-body p {
+  padding: 0px;
+  margin: 0px 0px 0px 20px;
+}
+
+.shipmentCard-index {
+  height: 30px !important;
+  width: 30px !important;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.shipmentCard-index p {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(83, 161, 210) !important;
+}
+
+.shipmentCard-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 20px;
+}
+
+.shipmentCard-itemsList {
+  padding-top: 20px;
+}
+
+#bold {
+  font-weight: 800;
+}
+
+#lightItalicized {
+  font-weight: 200;
+  font-style: italic;
+}
+
+#backgroundBlue {
+    background: linear-gradient(135deg, rgb(202, 206, 255) 81%,rgb(202, 206, 255) 82%,rgb(202, 206, 255) 82%,rgb(226, 229, 255) 100%);
+}
+
+#backgroundGreen {
+    background: linear-gradient(135deg, rgb(210, 255, 224) 81%,rgb(210, 255, 224) 82%,rgb(210, 255, 224) 82%,rgb(238, 255, 244) 100%);
+}
+
+#backgroundPurple {
+    background: linear-gradient(135deg, rgb(248, 216, 255) 81%,rgb(248, 216, 255) 82%,rgb(248, 216, 255) 82%,rgb(251, 231, 255) 100%);
+}
+
+#backgroundPink {
+    background: linear-gradient(135deg, rgb(255, 212, 252) 81%,rgb(255, 212, 252) 82%,rgb(255, 212, 252) 82%,rgb(250, 228, 248) 100%);
+}
+
+#backgroundTeal {
+    background: linear-gradient(135deg, rgb(218, 255, 255) 81%,rgb(218, 255, 255) 82%,rgb(218, 255, 255) 82%,rgb(232, 255, 255) 100%);
+}

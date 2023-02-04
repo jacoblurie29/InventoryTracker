@@ -1,0 +1,196 @@
+.addItemView-backdrop {
+  background: rgba(53, 53, 53, 0.25);
+  background-size: cover;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addItemView-dialog {
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.addItemView-dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addItemView-dialogHeader h2 {
+  padding: 5px;
+  margin: 0;
+}
+
+.addItemView-cancelButton {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0px;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+}
+
+.addItemView-cancelButton:disabled {
+  pointer-events: none;
+}
+
+.addItemView-cancelButton:hover {
+  color: #fff;
+  background-color: #b63b3b;
+  border: 2px solid #b63b3b !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.addItemView-cancelButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.addItemView-submitButton {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  outline: none;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+}
+
+.addItemView-submitButton:disabled {
+  pointer-events: none;
+}
+
+.addItemView-submitButton:hover {
+  color: #fff;
+  background-color: #4cac32;
+  border: 2px solid #4cac32 !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.addItemView-submitButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.addItemView-input {
+  margin: 0px 5px;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.addItemView-input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: rgb(83, 161, 210);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.addItemView-input::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.addItemView-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.addItemView-numberInput {
+  width: 100px;
+}
+
+.addItemView-textInput {
+  width: 240px;
+}
+
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  resize: vertical;
+  max-height: 300px;
+  min-height: 100px;
+}
+
+h6 {
+  color: red;
+  padding-left: 5px;
+  margin: 0;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+h5 {
+  padding-left: 5px;
+  padding-bottom: 2px;
+  margin: 0;
+  text-align: left;
+  color: gray;
+}
+
+.addItemView-quantityInputs {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.addItemView-inputWithError {
+  padding: 5px 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.addItemView-quantityInput {
+  width: 138px;
+}

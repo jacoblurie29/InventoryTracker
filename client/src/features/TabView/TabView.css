@@ -1,0 +1,127 @@
+.tabView {
+  width: 90vw;
+  min-height: 68vh;
+  margin: 0px 10px 10px 10px;
+  transition: all 0.15s ease-in;
+}
+
+.tabView:hover {
+  transform: scale(1.008);
+}
+
+.tabView-tabs {
+  display: flex;
+  height: 50px;
+  width: 350px;
+}
+
+.tabView-tabSelected {
+  border-radius: 10px 10px 0px 0px;
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f5e1;
+  border: 0.8px;
+  border-style: solid;
+  border-color: #fcf0c0;
+  border-bottom: 0px !important;
+}
+
+.tabView-tabSelected:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(248, 245, 225, 1) 0%,
+    rgb(244, 237, 200) 100%
+  );
+  cursor: pointer;
+}
+
+.tabView-tabNotSelected:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(248, 245, 225, 1) 0%,
+    rgb(244, 237, 200) 100%
+  );
+  cursor: pointer;
+}
+
+.tabView-tabNotSelected {
+  border-radius: 10px 10px 0px 0px;
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f5e1;
+  box-shadow: inset 10px -20px 15px -20px #adadad;
+  border: 0.8px;
+  border-style: solid;
+  border-color: #fcf0c0;
+  border-bottom: 0px !important;
+}
+
+.tabView-body {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(
+    130deg,
+    rgba(248, 245, 225, 1) 0%,
+    rgba(252, 246, 202, 1) 100%
+  );
+  box-shadow: 5px 5px 10px rgb(132, 132, 132);
+  border: 0.8px;
+  border-style: solid;
+  border-color: #fcf0c0;
+  border-top: 0px !important;
+  padding: 25px !important;
+}
+
+.tabView-body {
+  border-radius: 0px 10px 10px 10px;
+}
+
+.tabView-addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabView-addButton button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+}
+
+.tabView-addButton button:disabled {
+  pointer-events: none;
+}
+
+.tabView-addButton button:hover {
+  color: #fff;
+  background-color: rgb(83, 161, 210);
+  border: 2px solid rgb(83, 161, 210) !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.tabView-addButton button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
