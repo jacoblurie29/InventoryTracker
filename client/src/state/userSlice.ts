@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import { Item } from "../models/item";
 import { User } from "../models/user";
 import { fakeUserData } from "../temp/fakeUserData";
 
@@ -51,6 +52,17 @@ export const userSlice = createSlice({
     // payload: IncomingShipment object
     addShipment: (state, action) => {
       state.userData?.incomingShipments.push(action.payload);
+
+      toast.success("New shipment added!", {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     },
     // payload: string (id to be deleted)
     removeShipment: (state, action) => {
@@ -61,6 +73,25 @@ export const userSlice = createSlice({
         1
       );
     },
+    // payload: shipment (shipment to be merged with inventory)
+    completeDelivery: (state, action) => {
+      action.payload.items.forEach((item: Item) => {
+        state.userData!.inventoryGroups[0]!.items!.find(
+          (i) => i.id === item.id
+        )!.quantity += item.quantity;
+
+        toast.success("Shipment merged with inventory!", {
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
+    },
   },
 });
 
@@ -70,4 +101,5 @@ export const {
   addShipment,
   removeShipment,
   changeQuantity,
+  completeDelivery,
 } = userSlice.actions;

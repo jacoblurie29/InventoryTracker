@@ -1,7 +1,7 @@
 import "./ItemView.css";
 import { ChangeItemQuantity, Item } from "../../models/item";
 import { useAppDispatch } from "../../app/hooks";
-import { changeQuantity } from "../../state/userSlice";
+import { changeQuantity, removeItem } from "../../state/userSlice";
 
 interface Props {
   item: Item;
@@ -30,6 +30,14 @@ export default function ItemView({ item, index }: Props) {
         {item.warningQuantity > item.quantity &&
           "Low quantity! (< " + item.warningQuantity + ")"}
       </h5>
+      <div
+        className="itemView-deleteIcon"
+        onClick={() => {
+          dispatch(removeItem(item.id));
+        }}
+      >
+        <i className="fa-solid fa-trash deleteIcon"></i>
+      </div>
       <div className="itemView-buttonGroup">
         <button
           className="decrementButton"

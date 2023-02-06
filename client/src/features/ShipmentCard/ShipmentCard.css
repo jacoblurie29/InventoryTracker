@@ -2,14 +2,16 @@
   height: 300px;
   width: 300px;
   margin: 30px;
-  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.40);
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.15s ease-in;
   border-bottom-right-radius: 60px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
 .shipmentCard-body:hover {
-    transform: scale(1.04) !important;
+  transform: scale(1.04) !important;
 }
 
 .shipmentCard-body h3 {
@@ -62,22 +64,139 @@
   font-style: italic;
 }
 
+.shipmentCard-topBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipmentCard-deleteIcon {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(221, 85, 85);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 7px;
+}
+
+.shipmentCard-body:hover .shipmentCard-deleteIcon {
+  visibility: visible;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.shipmentCard-deleteIcon:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.deleteIcon {
+  color: white;
+}
+
+.shipmentCard-submitButton {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  visibility: hidden;
+}
+
+.shipmentCard-submitButton:disabled {
+  pointer-events: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.shipmentCard-submitButton:hover {
+  color: #fff;
+  background-color: #4cac32;
+  border: 2px solid #4cac32 !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.shipmentCard-submitButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.shipmentCard-bottomView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shipmentCard-body:hover .shipmentCard-submitButton {
+  visibility: visible;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
 #backgroundBlue {
-    background: linear-gradient(135deg, rgb(202, 206, 255) 81%,rgb(202, 206, 255) 82%,rgb(202, 206, 255) 82%,rgb(226, 229, 255) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(202, 206, 255) 81%,
+    rgb(202, 206, 255) 82%,
+    rgb(202, 206, 255) 82%,
+    rgb(226, 229, 255) 100%
+  );
 }
 
 #backgroundGreen {
-    background: linear-gradient(135deg, rgb(210, 255, 224) 81%,rgb(210, 255, 224) 82%,rgb(210, 255, 224) 82%,rgb(238, 255, 244) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(210, 255, 224) 81%,
+    rgb(210, 255, 224) 82%,
+    rgb(210, 255, 224) 82%,
+    rgb(238, 255, 244) 100%
+  );
 }
 
 #backgroundPurple {
-    background: linear-gradient(135deg, rgb(248, 216, 255) 81%,rgb(248, 216, 255) 82%,rgb(248, 216, 255) 82%,rgb(251, 231, 255) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(248, 216, 255) 81%,
+    rgb(248, 216, 255) 82%,
+    rgb(248, 216, 255) 82%,
+    rgb(251, 231, 255) 100%
+  );
 }
 
 #backgroundPink {
-    background: linear-gradient(135deg, rgb(255, 212, 252) 81%,rgb(255, 212, 252) 82%,rgb(255, 212, 252) 82%,rgb(250, 228, 248) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(255, 212, 252) 81%,
+    rgb(255, 212, 252) 82%,
+    rgb(255, 212, 252) 82%,
+    rgb(250, 228, 248) 100%
+  );
 }
 
 #backgroundTeal {
-    background: linear-gradient(135deg, rgb(218, 255, 255) 81%,rgb(218, 255, 255) 82%,rgb(218, 255, 255) 82%,rgb(232, 255, 255) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(218, 255, 255) 81%,
+    rgb(218, 255, 255) 82%,
+    rgb(218, 255, 255) 82%,
+    rgb(232, 255, 255) 100%
+  );
 }

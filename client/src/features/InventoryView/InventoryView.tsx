@@ -1,9 +1,10 @@
 import { useAppSelector } from "../../app/store";
+import { objectType } from "../../enums/enums";
 import ItemView from "../ItemView/ItemView";
 import "./InventoryView.css";
 
 interface Props {
-  setIsAddItem: (val: boolean) => void;
+  setIsAddItem: (type: number) => void;
   isAddItem: boolean;
 }
 
@@ -13,16 +14,16 @@ export default function InventoryView({ setIsAddItem, isAddItem }: Props) {
   );
 
   return (
-      <div className="inventoryView-body">
-        {inventoryItems?.map((item, index) => (
-          <div>
-            <ItemView item={item} index={index} key={index} />
-            <hr id="solidLine"></hr>
-          </div>
-        ))}
-        <div className="tabView-addButton">
-          <button onClick={() => setIsAddItem(!isAddItem)}>Add Item</button>
+    <div className="inventoryView-body">
+      {inventoryItems?.map((item, index) => (
+        <div key={index}>
+          <ItemView item={item} index={index} key={index} />
+          <hr id="solidLine"></hr>
         </div>
+      ))}
+      <div className="tabView-addButton">
+        <button onClick={() => setIsAddItem(objectType.Item)}>Add Item</button>
       </div>
+    </div>
   );
 }

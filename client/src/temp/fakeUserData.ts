@@ -1,3 +1,4 @@
+import { statusType } from "../enums/enums";
 import { User } from "../models/user";
 
 export const fakeUserData: User = {
@@ -54,7 +55,7 @@ export const fakeUserData: User = {
         },
       ],
       arrivalDate: new Date().toDateString(),
-      status: "in transit",
+      status: statusType.Ordered,
     },
     {
       sid: "YRF567",
@@ -75,7 +76,7 @@ export const fakeUserData: User = {
         },
       ],
       arrivalDate: new Date().toDateString(),
-      status: "in transit",
+      status: statusType.Ordered,
     },
   ],
 };

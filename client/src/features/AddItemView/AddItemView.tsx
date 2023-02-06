@@ -6,9 +6,10 @@ import "./AddItemView.css";
 import { UUID } from "uuid-generator-ts";
 import { useAppDispatch } from "../../app/store";
 import { addItem } from "../../state/userSlice";
+import { objectType } from "../../enums/enums";
 
 interface Props {
-  closeDialog: () => void;
+  closeDialog: (type: number) => void;
 }
 
 type FormValues = {
@@ -55,13 +56,16 @@ export default function AddItemView({ closeDialog }: Props) {
 
     dispatch(addItem(newItem));
 
-    closeDialog();
+    closeDialog(objectType.Item);
   });
 
   return (
     <div className="addItemView-backdrop">
       <div className="addItemView-dialog">
-        <button className="addItemView-cancelButton" onClick={closeDialog}>
+        <button
+          className="addItemView-cancelButton"
+          onClick={() => closeDialog(objectType.Item)}
+        >
           x
         </button>
         <div className="addItemView-dialogHeader">

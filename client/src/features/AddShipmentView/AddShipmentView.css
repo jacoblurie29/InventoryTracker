@@ -1,0 +1,288 @@
+.addShipmentView-backdrop {
+  background: rgba(53, 53, 53, 0.25);
+  background-size: cover;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addShipmentView-dialog {
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.addShipmentView-dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addShipmentView-dialogHeader h2 {
+  padding: 5px;
+  margin: 0;
+}
+
+.addShipmentView-cancelButton {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0px;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+}
+
+.addShipmentView-cancelButton:disabled {
+  pointer-events: none;
+}
+
+.addShipmentView-cancelButton:hover {
+  color: #fff;
+  background-color: #b63b3b;
+  border: 2px solid #b63b3b !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.addShipmentView-cancelButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.addShipmentView-submitButton {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(83, 161, 210);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(83, 161, 210);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+}
+
+.addShipmentView-submitButton:disabled {
+  pointer-events: none;
+}
+
+.addShipmentView-submitButton:hover {
+  color: #fff;
+  background-color: #4cac32;
+  border: 2px solid #4cac32 !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.addShipmentView-submitButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.addShipmentView-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+h6 {
+  color: red;
+  padding-left: 5px;
+  margin: 0;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+h5 {
+  padding-left: 5px;
+  padding-bottom: 2px;
+  margin: 0;
+  text-align: left;
+  color: gray;
+}
+
+.addShipmentView-inputWithError {
+  padding: 5px 0px;
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.addShipmentView-dateInput {
+  width: 200px;
+}
+
+.addShipmentView-itemsContainer {
+  height: 200px;
+  width: 300px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #95a5a6;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid #ecf0f1;
+  background: #ecf0f1;
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+input[type="date"],
+focus {
+  color: #95a5a6;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.addShipmentView-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2px;
+  margin: 0px 10px 0px 20px;
+}
+
+.addShipmentView-checkbox + label {
+  display: block;
+  margin: 0.225em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.addShipmentView-checkbox {
+  display: none;
+  vertical-align: middle;
+}
+
+.addShipmentView-checkbox + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.4em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+
+.addShipmentView-checkbox + label:active:before {
+  transform: scale(0);
+}
+
+.addShipmentView-checkbox:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+.addShipmentView-checkbox:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+.addShipmentView-checkbox:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+.todoItem-label {
+  font-size: 1em;
+}
+
+.addShipmentView-quantity {
+  width: 80px;
+}
+
+.addShipmentView-rightInputs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.addShipmentView-quantity {
+  margin: 0px 5px;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.addShipmentView-quantity:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: rgb(83, 161, 210);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.addShipmentView-quantity::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}

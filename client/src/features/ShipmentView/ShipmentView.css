@@ -1,7 +1,30 @@
 .shipmentView-body {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    overflow-y: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.shipmentView-addShipmentCard {
+  height: 300px;
+  width: 300px;
+  margin: 30px;
+  border: 1px dashed grey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.shipmentView-addShipmentCard h1 {
+  color: grey;
+}
+
+.shipmentView-addShipmentCard:hover {
+  cursor: pointer;
+  background-color: #f3edc8;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
